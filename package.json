@@ -1,0 +1,19 @@
+{
+  "name": "ocean-space-landing",
+  "version": "1.0.0",
+  "description": "A parallax space-themed landing page with heavy animations.",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Open index.html in your browser'"
+  },
+  "keywords": [
+    "landing-page",
+    "astronomy",
+    "parallax",
+    "tailwind",
+    "jquery",
+    "space"
+  ],
+  "author": "OCEAN",
+  "license": "MIT"
+}

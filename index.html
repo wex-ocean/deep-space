@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCEAN | Deep Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#030305',
+                        nebula: '#5b21b6',
+                        cyanGlow: '#06b6d4',
+                        accent: '#8b5cf6'
+                    },
+                    fontFamily: {
+                        sans: ['Exo 2', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(6, 182, 212, 0.5), 0 0 60px rgba(91, 33, 182, 0.3)',
+                        'card': '0 8px 32px 0 rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white">
+
+    <div id="cursor-glow"></div>
+    <div id="cursor-dot"></div>
+
+    <div class="star-layer stars-1"></div>
+    <div class="star-layer stars-2"></div>
+    <div class="star-layer stars-3"></div>
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-4 border-b border-white/5 bg-black/40 backdrop-blur-sm">
+        <div id="nav-container" class="container mx-auto px-6 flex justify-between items-center h-16 transition-all duration-500">
+            <a href="#" class="text-2xl font-display font-bold tracking-widest flex items-center gap-2 group">
+                <i class="fa-solid fa-rocket text-cyanGlow group-hover:rotate-45 transition-transform duration-300"></i>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 group-hover:to-cyanGlow transition-all">OCEAN</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-sm font-semibold tracking-wider uppercase">
+                <a href="#hero" class="hover:text-cyanGlow transition-colors relative group">
+                    Home <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanGlow group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#nebulae" class="hover:text-cyanGlow transition-colors relative group">
+                    Nebulae <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanGlow group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#planets" class="hover:text-cyanGlow transition-colors relative group">
+                    Planets <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanGlow group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#singularity" class="hover:text-cyanGlow transition-colors relative group">
+                    Singularity <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyanGlow group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute w-[800px] h-[800px] bg-nebula/20 rounded-full blur-[120px] animate-pulse"></div>
+        
+        <div class="relative z-10 text-center px-4 reveal-up">
+            <h1 class="text-6xl md:text-9xl font-display font-black mb-6 tracking-tighter leading-none">
+                <span class="block bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-600 drop-shadow-2xl">DEEP</span>
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyanGlow to-nebula animate-pulse">SPACE</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light tracking-[0.2em] border-l-2 border-cyanGlow pl-6 text-left ml-auto mr-auto">
+                "The universe is under no obligation to make sense to you." <br>
+                <span class="text-xs text-cyanGlow/80">— Neil deGrasse Tyson</span>
+            </p>
+            <a href="#nebulae" class="group relative px-8 py-4 bg-transparent border border-cyanGlow/50 text-cyanGlow font-bold uppercase tracking-widest overflow-hidden hover:text-black transition-colors duration-300 inline-block">
+                <span class="absolute inset-0 w-0 bg-cyanGlow transition-all duration-[250ms] ease-out group-hover:w-full"></span>
+                <span class="relative z-10">Initiate Launch</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="nebulae" class="relative py-32 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl md:text-7xl font-display font-bold mb-20 text-center reveal-up">
+                <span class="border-b-4 border-nebula pb-2">Stellar Nurseries</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal-up space-y-8">
+                    <p class="text-xl text-gray-300 leading-relaxed font-light">
+                        A nebula is a giant cloud of dust and gas in space. Some come from the gas and dust thrown out by the explosion of a dying star, such as a supernova.
+                    </p>
+                    <div class="glass-panel p-8 rounded-2xl shadow-neon border-l-4 border-cyanGlow transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-2xl font-display font-bold text-white mb-2">The Pillars of Creation</h3>
+                        <p class="text-gray-400">Located in the Eagle Nebula, approx 7,000 light-years away.</p>
+                    </div>
+                </div>
+
+                <div class="tilt-container reveal-up">
+                    <div class="tilt-card glass-panel p-2 rounded-3xl overflow-hidden shadow-2xl relative group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?q=80&w=1000&auto=format&fit=crop" class="w-full h-[500px] object-cover rounded-2xl transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute bottom-8 left-8 z-20">
+                            <h4 class="text-3xl font-display font-bold text-white">Carina Nebula</h4>
+                            <p class="text-cyanGlow tracking-widest text-sm">COSMIC DUST</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planets" class="relative py-32 px-6 bg-gradient-to-b from-void via-[#0a0a1a] to-void">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                
+                <div class="relative reveal-up flex justify-center">
+                    <div class="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full shadow-[0_0_100px_rgba(59,130,246,0.3)] relative overflow-hidden animate-[spin_60s_linear_infinite]">
+                        <img src="https://images.unsplash.com/photo-1614730341194-75c60740a2d3?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-90">
+                        <div class="absolute inset-0 rounded-full shadow-[inset_-20px_-20px_50px_rgba(0,0,0,0.9)]"></div>
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[40%] border border-cyanGlow/30 rounded-[100%] rotate-12 blur-[1px]"></div>
+                </div>
+
+                <div class="reveal-up">
+                    <h2 class="text-5xl md:text-7xl font-display font-bold mb-8 text-right">
+                        Planetary <br> <span class="text-transparent bg-clip-text bg-gradient-to-l from-blue-500 to-white">GIANTS</span>
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="glass-panel p-6 rounded-r-2xl border-l-4 border-blue-500 hover:bg-white/5 transition-colors cursor-crosshair">
+                            <h3 class="text-xl font-bold text-blue-400 mb-1"><i class="fa-solid fa-wind mr-2"></i>Atmosphere</h3>
+                            <p class="text-gray-400">Violent storms and massive hydrogen layers.</p>
+                        </div>
+                        <div class="glass-panel p-6 rounded-r-2xl border-l-4 border-purple-500 hover:bg-white/5 transition-colors cursor-crosshair">
+                            <h3 class="text-xl font-bold text-purple-400 mb-1"><i class="fa-solid fa-magnet mr-2"></i>Magnetosphere</h3>
+                            <p class="text-gray-400">Protecting moons from solar radiation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="singularity" class="relative py-40 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2000')] bg-cover bg-fixed opacity-20 mix-blend-color-dodge"></div>
+
+        <div class="container mx-auto relative z-10 text-center">
+            <h2 class="text-5xl md:text-8xl font-display font-black mb-16 text-white reveal-up drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+                EVENT HORIZON
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="tilt-card glass-panel p-10 rounded-2xl hover:shadow-[0_0_40px_rgba(139,92,246,0.4)] transition-all duration-500 reveal-up border border-white/5 group">
+                    <i class="fa-solid fa-infinity text-5xl text-accent mb-6 group-hover:scale-125 transition-transform"></i>
+                    <h3 class="text-2xl font-bold mb-4 font-display">Spaghettification</h3>
+                    <p class="text-gray-400 text-sm">Vertical stretching and horizontal compression of objects in a strong gravitational field.</p>
+                </div>
+
+                <div class="tilt-card glass-panel p-10 rounded-2xl hover:shadow-[0_0_40px_rgba(6,182,212,0.4)] transition-all duration-500 reveal-up border border-white/5 group md:-translate-y-12">
+                    <i class="fa-solid fa-clock-rotate-left text-5xl text-cyanGlow mb-6 group-hover:scale-125 transition-transform"></i>
+                    <h3 class="text-2xl font-bold mb-4 font-display">Time Dilation</h3>
+                    <p class="text-gray-400 text-sm">To a distant observer, a clock falling into a black hole would appear to tick slower and slower.</p>
+                </div>
+
+                <div class="tilt-card glass-panel p-10 rounded-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-500 reveal-up border border-white/5 group">
+                    <i class="fa-solid fa-circle-notch text-5xl text-white mb-6 group-hover:scale-125 transition-transform"></i>
+                    <h3 class="text-2xl font-bold mb-4 font-display">Accretion Disk</h3>
+                    <p class="text-gray-400 text-sm">A structure formed by diffuse material in orbital motion around a massive central body.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-white/10 relative z-10">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-2xl font-display font-bold text-white">OCEAN</span>
+            </div>
+            <div class="text-gray-500 text-sm">
+                &copy; 2025 Deep Space Exploration.
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
