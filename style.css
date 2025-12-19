@@ -1,70 +1,105 @@
         body {
             background-color: #030305;
-            cursor: none; /* Hide default cursor */
+            cursor: none;
+            /* Hide default cursor */
             overflow-x: hidden;
         }
 
-/* --- Upgraded Cosmic Cursor --- */
-#cursor-glow {
-    position: fixed;
-    top: 0; left: 0;
-    width: 250px; height: 250px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, rgba(91, 33, 182, 0.1) 40%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9998;
-    mix-blend-mode: screen;
-    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1); /* Slow, smooth trail */
-}
+        /* --- Upgraded Cosmic Cursor --- */
+        #cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, rgba(91, 33, 182, 0.1) 40%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9998;
+            mix-blend-mode: screen;
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            /* Slow, smooth trail */
+        }
 
-#cursor-dot {
-    position: fixed;
-    top: 0; left: 0;
-    width: 12px; height: 12px; /* Increased size */
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 10000;
-    box-shadow: 0 0 20px #06b6d4, 0 0 40px #5b21b6;
-    transition: transform 0.05s linear;
-}
+        #cursor-dot {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            /* Increased size */
+            background: #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 10000;
+            box-shadow: 0 0 20px #06b6d4, 0 0 40px #5b21b6;
+            transition: transform 0.05s linear;
+        }
 
-.particle {
-    position: fixed;
-    top: 0; left: 0;
-    pointer-events: none;
-    z-index: 9999;
-    border-radius: 50%;
-    background: #06b6d4;
-    animation: fadeOut 1s ease-out forwards;
-}
+        .particle {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+            border-radius: 50%;
+            background: #06b6d4;
+            animation: fadeOut 1s ease-out forwards;
+        }
 
-@keyframes fadeOut {
-    0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    100% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
-}
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0);
+            }
+        }
 
         /* --- 2. Heavy Star Backgrounds --- */
         .star-layer {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 200%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
             background-repeat: repeat;
             z-index: -1;
         }
-        .stars-1 { background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); opacity: 0.8; animation: moveVertical 100s linear infinite; }
-        .stars-2 { background-image: url('https://www.transparenttextures.com/patterns/stars.png'); opacity: 0.5; animation: moveVertical 150s linear infinite; background-size: 300px; }
-        .stars-3 { 
-            background: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px);
+
+        .stars-1 {
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.8;
+            animation: moveVertical 100s linear infinite;
+        }
+
+        .stars-2 {
+            background-image: url('https://www.transparenttextures.com/patterns/stars.png');
+            opacity: 0.5;
+            animation: moveVertical 150s linear infinite;
+            background-size: 300px;
+        }
+
+        .stars-3 {
+            background: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 3px);
             background-size: 550px 550px;
-            opacity: 0.3; 
-            animation: moveVertical 200s linear infinite; 
+            opacity: 0.3;
+            animation: moveVertical 200s linear infinite;
         }
 
         @keyframes moveVertical {
-            from { transform: translateY(0); }
-            to { transform: translateY(-50%); }
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-50%);
+            }
         }
 
         /* --- 3. Glassmorphism & Header --- */
@@ -81,6 +116,7 @@
             transform: translateY(50px) scale(0.95);
             transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
+
         .reveal-up.active {
             opacity: 1;
             transform: translateY(0) scale(1);
@@ -91,4 +127,3 @@
             transition: transform 0.1s;
             transform-style: preserve-3d;
         }
-  
